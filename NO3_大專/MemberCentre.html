@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員中心</title>
+    <script src="../_js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="MemberCenter.css">
+    <link rel="stylesheet" href="MCinformation.css">
+    <link rel="stylesheet" href="./css/toastr.css">
+</head>
+
+<body>
+    <!-- 此處是header 不用看 -->
+
+    <div class="header ">
+        <img src="./images/群組 1.png" alt="" style="width: 90px ;top: -8px; position: relative;">
+        <div class="header-right">
+            <a href="#">美食</a>
+            <a href="#">景點</a>
+            <a href="#">活動</a>
+            <a href="#">住宿</a>
+            <a href="#">交通</a>
+            <a href="#"><img src="./images/cart.png" style="width: 25px ;"></a>
+            <a href="#">登入|註冊</a>
+        </div>
+        <form class="example" action="">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+
+
+
+
+
+    <!-- body -->
+    <div class="MemberCentre">
+        <!-- 左邊欄位 -->
+        <div class="tab">
+            <!-- 圖片+會員名字 -->
+            <div class="MemberImg">
+                <img id="MemberImgId" src="./images/cat.jpg" alt="">
+                <div>
+                    <!-- 使用按鈕觸發input檔案上傳 -->
+                    <input id="chengImgBtn" type="file" onchange="upload(this)" style="display: none" />
+                    <button type="button" onclick="chengImgBtn.click()" id="cameraBtn">
+                        <img src="./images/camera.png" alt="" style="width:25px ;">
+                    </button>
+                </div>
+                <p>王曉明</p>
+            </div>
+            <!-- 大分頁按鈕 -->
+            <div class="tabBtn">
+                <button class="tablinks" onclick="openCity(event, 'information')" id="defaultOpen">
+                    <span><img src="./images/flower.png" style="width: 30px; vertical-align:middle; ">&emsp;帳號設定</span>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'discount')">
+                    <span><img src="./images/flower.png" style="width: 30px; vertical-align:middle; ">&emsp; 折扣券</span>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'rebate')">
+                    <span><img src="./images/flower.png" style="width: 30px; vertical-align:middle; ">&emsp; 回饋金</span>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'sevenDay')">
+                    <span><img src="./images/flower.png" style="width: 30px; vertical-align:middle; ">&emsp;
+                        登入七天簽到活動</span>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'memberOrder')">
+                    <span><img src="./images/flower.png" style="width: 30px; vertical-align:middle; ">&emsp; 訂單管理</span>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'collect')">
+                    <span><img src="./images/flower.png" style="width: 30px; vertical-align:middle; ">&emsp; 我的收藏</span>
+                </button>
+
+            </div>
+
+        </div>
+        <!-- 帳號設定頁面 -->
+        <div id="information" class="tabcontent">
+            <h2>帳號設定 </h2>
+            <div class="setBody">
+                <span style="color: #8C5C02;"> <b>基本資料</b> </span>
+                <br><br>
+                <div class="basic">
+                    <span>姓名<b>*</b> </span>
+                    <input type="text" value="王曉明">
+                </div>
+                <div class="basic">
+                    <span>性別</span>
+                    <select name="" id="">
+                        <option value="man">男生</option>
+                        <option value="girl">女生</option>
+                        <option value="sec">保密</option>
+                    </select>
+                </div>
+                <br>
+                <div class="basic">
+                    <span>出生日期</span>
+                    <input type="date">
+                </div>
+                <br>
+                <div class="basic">
+                    <span>電話號碼<b>*</b></span>
+                    <input type="tel">
+                </div>
+                <br>
+                <div class="basic">
+                    <span>連絡信箱<b>*</b></span>
+                    <input type="email">
+                </div>
+                <br>
+                <div class="basic">
+                    <span>密碼<b>*</b></span>
+                    <input type="password">
+                </div>
+                <div class="basicBtn">
+                    <button class="informationBtn"> <b>儲存</b> </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 折扣券頁面 -->
+        <div id="discount" class="tabcontent">
+            <h2>折扣券</h2>
+            <div class="setBody">
+                <div class="discountBtn" style="width:100% ">
+                    <!-- 可|已使用按鈕分頁 -->
+                    <div class="discountTab">
+                        <button class="discountlinks" onclick="discountOpen(event, 'discountUse')"
+                            id="discountOpen">可使用</button>
+                        <button class="discountlinks" onclick="discountOpen(event, 'discountUsed')">已使用</button>
+                    </div>
+                    <!-- 可使用折扣券內容明細 -->
+                    <div id="discountUse" class="discountBody">
+                        <div class="discountDiv">
+                            <span>95折</span> <br>
+                            <span>訂單金額須滿100元</span> <br>
+                            <span>有效期限: 剩餘20天12hr</span> <br>
+                        </div>
+                        <div class="discountDiv">
+                            <span>TWD100</span> <br>
+                            <span>訂單金額須滿100元</span> <br>
+                            <span>有效期限: 剩餘20天12hr</span> <br>
+                        </div>
+                        <div class="discountDiv">
+                            <span>95折</span> <br>
+                            <span>訂單金額須滿100元</span> <br>
+                            <span>有效期限: 剩餘20天12hr</span> <br>
+                        </div>
+                        <div class="discountDiv">
+                            <span>95折</span> <br>
+                            <span>訂單金額須滿100元</span> <br>
+                            <span>有效期限: 剩餘20天12hr</span> <br>
+                        </div>
+                    </div>
+                    <!-- 已使用折扣券內容明細 -->
+                    <div id="discountUsed" class="discountBody">
+                        <div class="discountDivUsed">
+                            <span>95折</span> <br>
+                            <span>訂單金額須滿100元</span> <br>
+                            <span>有效期限: 剩餘20天12hr</span> <br>
+                        </div>
+                        <div class="discountDivUsed">
+                            <span>TWD100</span> <br>
+                            <span>訂單金額須滿100元</span> <br>
+                            <span>有效期限: 剩餘20天12hr</span> <br>
+                        </div>
+                        <div class="discountDivUsed">
+                            <span>95折</span> <br>
+                            <span>訂單金額須滿100元</span> <br>
+                            <span>有效期限: 剩餘20天12hr</span> <br>
+                        </div>
+                        <div class="discountDivUsed">
+                            <span>95折</span> <br>
+                            <span>訂單金額須滿100元</span> <br>
+                            <span>有效期限: 剩餘20天12hr</span> <br>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 回饋金頁面 -->
+        <div id="rebate" class="tabcontent">
+            <h2 class="rebateH2">回饋金</h2>
+            <div style="text-align:center;">
+                <img src="./images/p.png" style="width: 30px; vertical-align:middle;">&emsp;123
+                <br>
+                <span class="poindDayline">有效期限:最近一筆訂單時間+1Y</span>
+            </div>
+            <div class="setBody">
+                <div class="rebateBtn" style="width:100% ">
+                    <div class="rebateTab">
+                        <button class="rebatelinks" onclick="rebateOpen(event, 'rebateUse')"
+                            id="rebateOpen">獲得紀錄</button>
+                        <button class="rebatelinks" onclick="rebateOpen(event, 'rebateUsed')">使用紀錄</button>
+                    </div>
+
+                    <div id="rebateUse" class="rebateBody">
+                        <!-- 獲得紀錄內容 -->
+                        <table class="rebateGetTable">
+                            <tbody>
+                                <tr class="rebateGetTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;3
+                                    </td>
+                                </tr>
+                                <tr class="rebateGetTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;3
+                                    </td>
+                                </tr>
+                                <tr class="rebateGetTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;3
+                                    </td>
+                                </tr>
+                                <tr class="rebateGetTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;3
+                                    </td>
+                                </tr>
+                                <tr class="rebateGetTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;3
+                                    </td>
+                                </tr>
+                                <tr class="rebateGetTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;3
+                                    </td>
+                                </tr>
+                                <tr class="rebateGetTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;3
+                                    </td>
+                                </tr>
+                                <tr class="rebateGetTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;3
+                                    </td>
+                                </tr>
+                                <tr class="rebateGetTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;3
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div id="rebateUsed" class="rebateBody">
+                        <!-- 使用紀錄內容 -->
+                        <table class="rebateUsedTable">
+                            <tbody>
+                                <tr class="rebateUsedTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;-3
+                                    </td>
+                                </tr>
+                                <tr class="rebateUsedTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;-13
+                                    </td>
+                                </tr>
+                                <tr class="rebateUsedTr">
+                                    <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                    <td>2022-10-25</td>
+                                    <td><img src="./images/p.png" style="width: 20px; vertical-align:middle;"> &ensp;-33
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 登入七天簽到頁面 -->
+        <div id="sevenDay" class="tabcontent">
+            <h2>登入七天簽到活動</h2>
+            <br>
+            <div class="setBody">
+                <div class="dayOneSeven">
+                    <img class="ImgPick" src="./images/day7/day1.png" alt="">
+                    <img class="ImgPick" src="./images/day7/day2.png" alt="">
+                    <img class="ImgPick" src="./images/day7/day3.png" alt="">                    
+                    <img class="ImgPick" src="./images/day7/day4.png" alt="">                    
+                </div>
+                <div class="dayOneSeven">
+                    <img class="ImgPick" src="./images/day7/day5.png" alt="">
+                    <img class="ImgPick" src="./images/day7/day6.png" alt="">
+                    <img class="ImgPick" src="./images/day7/day7.png" alt="">
+                </div>
+               
+            </div>
+
+        </div>
+
+        <!-- 訂單管理頁面 -->
+        <div id="memberOrder" class="tabcontent">
+            <div class="setBody">
+                <h2 class="memberOrderH2">訂單管理</h2>
+                <div class="memberOrderBtn" style="width:100% ">
+                    <!-- 準備出發 已出發 已取消 分頁按鈕 -->
+                    <div class="memberOrderTab">
+                        <button class="memberOrderlinks" onclick="memberOrderOpen(event, 'memberOrderReady')"
+                            id="memberOrderOpen">準備出發</button>
+                        <button class="memberOrderlinks" onclick="memberOrderOpen(event, 'memberOrderGo')">已出發</button>
+                        <button class="memberOrderlinks"
+                            onclick="memberOrderOpen(event, 'memberOrderCancel')">已取消</button>
+                    </div>
+                    <!-- 準備出發 內容明細 -->
+                    <div id="memberOrderReady" class="memberOrderBody">
+                        <!-- 準備出發的訂單明細 -->
+                        <div class="OrderReadyDiv">
+                            <div class="OrderReadyImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                            <div class="OrderReadyRight">
+                                <div class="ORRightName">
+                                    <h4>台灣宜蘭｜國立傳統藝術中心｜門票、畫舫船遊河券、遊程體驗遊程體驗遊程體驗</h4>
+                                    <span>訂單編號</span><span>#22KK250156250</span>
+                                </div>
+                                <div class="ORRightPrice">TWD<span>100</span></div>
+                                <div class="ORRightBtn">
+                                    <button>查看憑證</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="OrderReadyDiv">
+                            <div class="OrderReadyImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                            <div class="OrderReadyRight">
+                                <div class="ORRightName">
+                                    <h4>台灣宜蘭｜國立傳統藝術中心｜門票、畫舫船遊河券、遊程體驗遊程體驗遊程體驗</h4>
+                                    <span>訂單編號</span><span>#22KK250156250</span>
+                                </div>
+                                <div class="ORRightPrice">TWD<span>100</span></div>
+                                <div class="ORRightBtn">
+                                    <button>查看憑證</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="OrderReadyDiv">
+                            <div class="OrderReadyImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                            <div class="OrderReadyRight">
+                                <div class="ORRightName">
+                                    <h4>台灣宜蘭｜國立傳統藝術中心｜門票、畫舫船遊河券、遊程體驗遊程體驗遊程體驗</h4>
+                                    <span>訂單編號</span><span>#22KK250156250</span>
+                                </div>
+                                <div class="ORRightPrice">TWD<span>100</span></div>
+                                <div class="ORRightBtn">
+                                    <button>查看憑證</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div id="memberOrderGo" class="memberOrderBody">
+                        <!-- 已出發的訂單明細 -->
+                        <div class="OrderReadyDiv">
+                            <div class="OrderReadyImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                            <div class="OrderReadyRight">
+                                <div class="ORRightName">
+                                    <h4>台灣宜蘭｜國立傳統藝術中心｜門票、畫舫船遊河券、遊程體驗遊程體驗遊程體驗</h4>
+                                    <span>訂單編號</span><span>#22KK250156250</span>
+                                </div>
+                                <div class="ORRightPrice">TWD<span>100</span></div>
+                                <div class="ORRightBtn">
+                                    <button id="GoEvaluationBtn">前往評價</button>
+                                    <button>查看憑證</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 前往評價燈箱 -->
+                        <div id="id01" class="modal">
+                            <form class="modal-content animate" method="post">
+                                <span id="evaluationX" class="close" title="Close Modal">
+                                    &times;
+                                </span>
+                                <p>桃園青埔|Xpark 都會型水生公園門票</p>
+                                <div class="evaluationStar">
+                                    <div class="evaluationText"> 本次評價好感度
+                                        <span style="color: red;">*</span>
+                                        <div class="star">
+                                            <!-- 主體 -->
+                                            <div class="box1">
+                                            </div>
+                                            <div class="box1">
+                                            </div>
+                                            <div class="box1">
+                                            </div>
+                                            <div class="box1">
+                                            </div>
+                                            <div class="box1">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <p>評論內容</p>
+                                <textarea name="" id="" cols="35" rows="5"></textarea>
+                                <button type="submit" class="evaluationSendBtn">送出</button>
+
+                            </form>
+                        </div>
+                        <!--前往評價燈箱結束 -->
+
+                        <div class="OrderReadyDiv">
+                            <div class="OrderReadyImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                            <div class="OrderReadyRight">
+                                <div class="ORRightName">
+                                    <h4>台灣宜蘭｜國立傳統藝術中心｜門票、畫舫船遊河券、遊程體驗遊程體驗遊程體驗</h4>
+                                    <span>訂單編號</span><span>#22KK250156250</span>
+                                </div>
+                                <div class="ORRightPrice">TWD<span>100</span></div>
+                                <div class="ORRightBtn">
+                                    <button>查看評價</button>
+                                    <button>查看憑證</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="memberOrderCancel" class="memberOrderBody">
+                        <!-- 已取消的訂單明細 -->
+                        <div class="OrderReadyDiv">
+                            <div class="OrderReadyImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                            <div class="OrderReadyRight">
+                                <div class="ORRightName">
+                                    <h4>台灣宜蘭｜國立傳統藝術中心｜門票、畫舫船遊河券、遊程體驗遊程體驗遊程體驗</h4>
+                                    <span>訂單編號</span><span>#22KK250156250</span>
+                                </div>
+                                <div class="ORRightPrice">TWD<span>100</span></div>
+                                <div class="ORRightBtn">
+                                    <button>重新訂購</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 收藏頁面 -->
+        <div id="collect" class="tabcontent">
+            <div class="setBody">
+                <h2>我的收藏</h2>
+                <!-- 準備出發的訂單明細 -->
+                <div class="collectDiv">
+                    <div class="collectImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                    <div class="collectRight">
+                        <div class="collectName">
+                            <button class="collectHeart collectDelete"><i class="fa fa-heart fa-2x"></i></button>
+                            <h3>台中 | 幻覺博物館門票台中 | 幻覺博物館門票台中 | 幻覺博物館門票</h3>
+                            <p>
+                                位於台中精明商圈，現場提供導覽解說，讓您在每一區都能有完整體驗多主題體驗區，變大變小、萬花筒鏡、閃閃燈光屋、漂浮等，邊玩邊拍照，兼具教育、啟發、創造、娛樂體驗，適合大小朋友一同探索
+                            </p>
+                            <div class="collectNamePrice">
+                                <!-- 評價星星 -->
+                                <div class="collectstar">
+                                    <img src="./images/1.png">
+                                    <img src="./images/1.png">
+                                    <img src="./images/1.png">
+                                    <img src="./images/1.png">
+                                    <img src="./images/1.png">
+                                    <div>(46)</div>
+                                </div>
+                                <span>TWD<span>630</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collectDiv">
+                    <div class="collectImg"><img src="./images/商品暫用圖/A03.jpg"></div>
+                    <div class="collectRight">
+                        <div class="collectName">
+                            <button class="collectHeart collectDelete"><i class="fa fa-heart fa-2x"></i></button>
+                            <h3>台中 | 幻覺博物館門票台中 | 幻覺博物館門票台中 | 幻覺博物館門票</h3>
+                            <p>
+                                位於台中精明商圈，現場提供導覽解說，讓您在每一區都能有完整體驗多主題體驗區，變大變小、萬花筒鏡、閃閃燈光屋、漂浮等，邊玩邊拍照，兼具教育、啟發、創造、娛樂體驗，適合大小朋友一同探索
+                            </p>
+                            <div class="collectNamePrice">
+                                <!-- 評價星星 -->
+                                <div class="collectstar">
+                                    <img src="./images/1.png">
+                                    <img src="./images/1.png">
+                                    <img src="./images/1.png">
+                                    <img src="./images/1.png">
+                                    <img src="./images/0.png">
+                                    <div>(46)</div>
+                                </div>
+                                <span>TWD<span>630</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- 此處是footer 不用看 -->
+
+    <div class="footer">
+        <div class="footerCenter">
+            <div class="footerBody">
+                <ul>
+                    <h4>認識我們</h4>
+                    <li><a href="">關於我們</a></li>
+                    <li><a href="">使用者條款</a></li>
+                    <li><a href="">隱私權保護政策</a></li>
+                    <li><a href="">常見問題與幫助</a></li>
+                </ul>
+            </div>
+            <div class="footerBody">
+                <ul>
+                    <h4>給旅行者們</h4>
+                    <li><a href="">三大保證</a></li>
+                    <li><a href="">合作夥伴</a></li>
+                    <li><a href="">回饋金介紹</a></li>
+                    <li><a href="">賺取額外獎勵</a></li>
+                </ul>
+            </div>
+            <div class="footerBody">
+                <ul>
+                    <h4>給合作夥伴</h4>
+                    <li><a href="">成為供應商</a></li>
+                    <li><a href="">供應商登入</a></li>
+                    <li><a href="">同業合作</a></li>
+                    <li><a href="">聯盟行銷</a></li>
+                </ul>
+            </div>
+            <div class="footerBody">
+                <div class="footerImg">
+                    <h4>付款方式</h4>
+                    <img src="./images/MasterCard.png">
+                    <img src="./images/JCB.jpg">
+                    <img src="./images/visa.png">
+                    <img src="./images/googlepay.jpg">
+                    <img src="./images/apple-pay.png">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="MemberCentre.js"></script>
+    <script src="./_js/toastr.js"></script>
+</body>
+
+</html>

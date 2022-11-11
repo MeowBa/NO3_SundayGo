@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <script src="../_js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cart.css">
+
+
+</head>
+
+<body>
+    <!-- header 不用看 -->
+    <div class="header ">
+        <img src="./images/群組 1.png" alt="" style="width: 90px ;top: -8px; position: relative;">
+        <div class="header-right">
+            <a href="#">美食</a>
+            <a href="#">景點</a>
+            <a href="#">活動</a>
+            <a href="#">住宿</a>
+            <a href="#">交通</a>
+            <a href="#"><img src="./images/cart.png" style="width: 25px ;"></a>
+            <a href="#">登入|註冊</a>
+        </div>
+        <form class="example" action="">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+    <div id="car">
+        <!-- 最上面進度條 -->
+        <div id="progressBar">
+            <!-- 進度條 -->
+            <div>
+                <span></span>
+            </div>
+            <!-- 花跟字 -->
+            <ol class="cartList">
+                <li>
+                    購物車
+                    <img src="./images/flower.png">
+                </li>
+                <li>
+                    填寫資料及付款
+                    <img src="./images/flower.png">
+                </li>
+                <li>
+                    訂購完成
+                    <img src="./images/flower.png">
+                </li>
+            </ol>
+        </div>
+        <div class="container">
+            <div class="carTitle">&diams;&diams;&diams;購物車清單</div>
+            <div class="carHeader">
+                <!-- 全選核取方塊 -->
+                <div class="carChecked"> <input type="checkbox" id="checkAll"> 全選</div>
+                <div class="carDetail">商品圖片</div>
+                <div class="carDetail">商品名稱</div>
+                <div>單價</div>
+                <div class="count">數量</div>
+                <div class="amount">總計</div>
+                <div class="operate">刪除</div>
+            </div>
+            <!-- 商品明細 -->
+            <div class="carHeader carBody">
+                <div class="carChecked">
+                    <!-- 個別核取方塊 -->
+                    <input type="checkbox" name="subItem" id="liCheck">
+                </div>
+                <div class="carDetail">
+                    <img src="./images/商品暫用圖/A04.jpg" alt="">
+                </div>
+                <div class="carDetail">
+                    <div class="name">饗食天堂｜饗賓餐飲電子餐券｜台灣</div>
+                </div>
+                <div>$ <span class="price">200</span> </div>
+                <div class="count">
+                    <!-- 商品個別+- -->
+                    <button class="add">+</button>
+                    <span class="count">1</span>
+                    <button class="reduce">-</button>
+                </div>
+                <!-- 商品個別小計 -->
+                <div class="amount"><span class="sub_total">200</span></div>
+                <div class="operate">
+                    <i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="carHeader carBody">
+                <div class="carChecked">
+                    <!-- 個別核取方塊 -->
+                    <input type="checkbox" name="subItem" id="liCheck">
+                </div>
+                <div class="carDetail">
+                    <img src="./images/商品暫用圖/A04.jpg" alt="">
+                </div>
+                <div class="carDetail">
+                    <div class="name">饗食天堂｜饗賓餐飲電子餐券｜台灣</div>
+                </div>
+
+                <div>$ <span class="price">300</span> </div>
+                <div class="count">
+                    <!-- 商品個別+- -->
+                    <button class="add">+</button>
+                    <span class="count">1</span>
+                    <button class="reduce">-</button>
+                </div>
+                <!-- 商品個別小計 -->
+                <div class="amount"><span class="sub_total">300</span></div>
+                <div class="operate">
+                    <i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 總金額及按鈕 -->
+        <div class="carTotal">
+            <div>
+                <div>
+                    <span>總金額</span>
+                    <span class="total">500</span>
+                </div>
+                <div>
+                    <span>回饋金</span>
+                    <span class="gold">10</span>
+                </div>
+            </div>
+            <a href="">前往結帳</a>
+        </div>
+
+        <div class="continueBtn">
+            <a href="">繼續購物
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            </a>
+        </div>
+
+
+        <!-- 下層更多推薦商品熱銷 -->
+        <div class="toMoreHot">
+            <span>更多推薦商品</span>
+            <div>
+                <a href=""><img src="./images/商品暫用圖/A05.jpg" alt=""></a>
+                <a href=""><img src="./images/商品暫用圖/A04.jpg" alt=""></a>
+                <a href=""><img src="./images/商品暫用圖/A03.jpg" alt=""></a>
+                <a href=""><img src="./images/商品暫用圖/A03.jpg" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footerCenter">
+            <div class="footerBody">
+                <ul>
+                    <h4>認識我們</h4>
+                    <li><a href="">關於我們</a></li>
+                    <li><a href="">使用者條款</a></li>
+                    <li><a href="">隱私權保護政策</a></li>
+                    <li><a href="">常見問題與幫助</a></li>
+                </ul>
+            </div>
+            <div class="footerBody">
+                <ul>
+                    <h4>給旅行者們</h4>
+                    <li><a href="">三大保證</a></li>
+                    <li><a href="">合作夥伴</a></li>
+                    <li><a href="">回饋金介紹</a></li>
+                    <li><a href="">賺取額外獎勵</a></li>
+                </ul>
+            </div>
+            <div class="footerBody">
+                <ul>
+                    <h4>給合作夥伴</h4>
+                    <li><a href="">成為供應商</a></li>
+                    <li><a href="">供應商登入</a></li>
+                    <li><a href="">同業合作</a></li>
+                    <li><a href="">聯盟行銷</a></li>
+                </ul>
+            </div>
+            <div class="footerBody">
+                <div class="footerImg">
+                    <h4>付款方式</h4>
+                    <img src="./images/MasterCard.png">
+                    <img src="./images/JCB.jpg">
+                    <img src="./images/visa.png">
+                    <img src="./images/googlepay.jpg">
+                    <img src="./images/apple-pay.png">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="cart.js"></script>
+    <!-- <script >
+
+        // 購物車明細+-
+
+        /****點擊增加按钮****/
+        $('.add').click(function () {
+            //修改数量
+            var n = $(this).next().html();
+            var num = parseInt(n) + 1;
+            // console.log(num);
+            $(this).next().html(num);
+            //計算小計
+            var c = $(this).parent().siblings().children('.price').html();
+            // console.log(parseInt(c)); //1197
+            parseInt(c);
+            var subPrice = num * c;
+            $(this).parent().siblings().children('.sub_total').html(subPrice);
+
+            //計算總金額及回饋金
+            var total = 0;
+            $('.sub_total').each(function () {
+                var price = parseInt($(this).html());
+                // console.log(price)
+                total += price;
+                $('.total').html(total);
+                // 回饋金
+                $('.gold').html(Math.floor(total * 0.02));
+            });
+        });
+
+
+        /****點擊减少按钮****/
+        $('.reduce').click(function () {
+            //修改数量
+            var n = $(this).prev().html();
+            var num = parseInt(n) - 1;
+            if (num == 0) { return; }//數量减到0就不能再减了
+            $(this).prev().html(num);
+
+            //計算價格
+            var c = $(this).parent().siblings().children('.price').html();
+            parseInt(c);
+            var subPrice = num * c;
+            subPrice.toFixed(2);
+            var sub_price = subPrice.toFixed(2);
+            $(this).parent().siblings().children('.sub_total').html(sub_price);
+
+            //計算總價及回饋金
+            var total = 0;
+            $('.sub_total').each(function () {
+                var price = parseInt($(this).html());
+                total += price;
+                $('.total').html(total);
+                // 計算回饋金               
+                $('.gold').html(Math.floor(total * 0.02));
+            });
+        });
+
+        // 全選核取方塊
+        var subItem = document.getElementsByName("subItem"); // 個別的核取方塊
+        var all = document.getElementById("checkAll"); //全選核取方塊
+
+        function AllSetSubItem() {
+            for (var i = 0; i < subItem.length; i++) {
+                subItem[i].checked = all.checked;
+            }
+        }
+        all.addEventListener('change', AllSetSubItem)
+
+        function SubItemSetAll() {
+            if (this.checked == false) {
+                all.checked = false;
+            }
+            // subItem三個都勾→All也勾
+            var current = subItem.length;
+            var check = document.querySelectorAll('input[name="subItem"]:checked').length;
+            if (current == check) {
+                all.checked = true;
+            }
+        }
+        for (var i = 0; i < subItem.length; i++) {
+            subItem[i].addEventListener('change', SubItemSetAll)
+        }
+    </script> -->
+</body>
+
+</html>

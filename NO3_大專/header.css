@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.header {
+    overflow: hidden;
+    /* background-color: #f1f1f1; */
+    padding: 12px;
+    height: 30px;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.header a {
+    float: left;
+    color: #8C5C02;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    text-decoration:none;
+}
+
+.header a:hover {
+    color: #F29F04;
+}
+
+
+.header-right {
+    float: right;
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+}
+
+/* menu三條線的設定 */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    color: #8C5C02;
+    border: none;
+    background-color: white;
+}
+
+.openbtn:hover {
+    color: #F29F04;
+}
+
+
+
+#myLinks {
+    /* overflow: hidden; */
+    float: right;
+    position: relative;
+    display: none;
+}
+
+#myLinks a {
+    color: #8C5C02;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+#myLinks a:hover {
+
+    color: #F29F04;
+}
+
+/* 搜尋列的CSS */
+form.example {
+    float: right;
+    margin: 5px;
+}
+
+form.example input[type=text] {
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid grey;
+    width: 75%;
+    float: left;
+
+}
+
+form.example button {
+    width: 30px;
+    padding: 5px;
+    background: #ffffff;
+    color: #8C5C02;
+    font-size: 12px;
+    border: 1px solid grey;
+    float: left;
+}
+
+form.example button:hover {
+    background: #F29F04;
+}
+
+.example {
+    width: 250px;
+}
+
+/* footer */
+
+.footer {
+    /* position: fixed; */
+    width: 100%;
+    height: 160px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.1);
+    color: #8C5C02;    
+}
+
+.footerCenter{
+    width: 1280px;
+    margin: 0 auto;
+    /* background-color: rgb(0, 0, 0, 0.1); */
+}
+
+.footerBody {
+    width: 25%;
+    /* margin: 0 auto; */
+    float: left;
+}
+
+.footerBody>ul>li{
+    font-size: 14px;
+}
+
+.footerBody>ul {
+    list-style-type:none;
+    text-align: left;
+    /* font-size: 12px; */
+}
+
+.footerBody>ul>li>a {
+    color: #8C5C02;
+    text-decoration:none;
+}
+
+.footerBody>ul>li>a:visited {
+    color: #8C5C02;    
+}
+.footerBody>ul>li>a:hover {
+    color: #F29F04;    
+}
+
+.footerImg>h4{
+
+    font-size: 12px;
+}
+.footerImg>img{
+    width: 40px;
+}

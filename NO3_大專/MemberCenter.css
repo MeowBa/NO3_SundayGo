@@ -1,0 +1,132 @@
+/* 會員中心 左邊大分頁 */
+
+.MemberImg {
+    border: 2px #ccc solid;
+    border-radius: 10px;
+    width: 215px;
+    height: 220px;
+    margin: 10px auto;
+    padding: 10px;
+    display: block
+}
+
+/* 圓形照片設置 */
+.MemberImg>img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+    /* position:absolute; */
+}
+
+/* 更換圖片按鈕 */
+#cameraBtn {
+    /* background-color: transparent; */
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    top: -25px;
+    left: 130px;
+    z-index: 1;
+    border: 0;
+}
+
+/* 更換圖片按鈕hover */
+#cameraBtn:hover {
+    background-color: hsl(39, 97%, 48%, 0.3);
+    border-radius: 30px;
+}
+
+/* 會員中心的名字 */
+.MemberImg p {
+    text-align: center;
+    color: #8C5C02;
+    position: relative;
+    bottom: 20px;
+
+}
+
+/* 置中留白 */
+.MemberCentre {   
+    width: 1280px; 
+    margin: 0 auto;
+    height: 800px;
+}
+
+
+/* 左邊樣式 */
+.tab {
+    float: left;
+    /* background-color: #f1f1f1; */
+    width: 20%;
+    height: 600px;
+}
+
+.tabBtn {
+    border: 2px #ccc solid;
+    border-radius: 10px;
+    padding: 3px;
+    width: 90%;
+    margin: auto;
+}
+
+.tabBtn img {
+    filter: grayscale(100%);
+}
+
+
+/* 分頁按鈕的樣式 */
+.tabBtn>button {
+    display: block;
+    background-color: inherit;
+    color: rgb(0, 0, 0, 0.5);
+    padding: 18px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+
+/* 分頁按鈕hover */
+.tabBtn button:hover {
+    color: #F29F04;
+    border-left: 4px #F29F04 solid;
+    
+}
+/* 按鈕裡圖片的hover */
+.tabBtn>button:hover img{
+    filter: grayscale(0%);
+}
+
+/* 分頁按鈕選中的顏色 */
+.tabBtn button.active {
+    /* background-color: #ccc; */
+    color: #F29F04;
+    border-left: 4px #F29F04 solid;
+    
+}
+.tabBtn>button.active img{
+    filter: grayscale(0%);
+}
+
+/* 右邊顯示的樣式 */
+.tabcontent {
+    /* background-color: #8C5C02; */
+    float: left;
+    padding: 0 18px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 73%;
+    min-height: 680px;
+    /* height: 655px; */
+    margin-top: 10px;
+    margin-left: 15px;
+}

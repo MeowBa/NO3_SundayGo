@@ -1,0 +1,591 @@
+/* 帳號設定 基本資料 */
+
+.tabcontent h2 {
+    padding: 10px 12px;
+    /* background-color: aqua; */
+}
+
+.setBody {
+    /* background-color: lightblue; */
+    /* width: 780px; */
+    height: 520px;
+    margin: auto;
+    /* padding: 10px 12px; */
+}
+
+.setBody span {
+    font-size: 16px;
+    margin: 10px 12px;
+    /* background-color: red; */
+}
+
+.setBody div b {
+    color: red;
+}
+
+/* 輸入框設定 */
+.setBody input,
+select {
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    outline: 2px solid rgba(0, 0, 0, 0.2);
+    /* 外框效果 */
+    /* border: 2px solid rgba(0, 0, 0, 0.3); */
+    border-radius: 10px;
+}
+
+.basic {
+    /* background-color: lawngreen; */
+    /* padding: 10px px; */
+    width: 50%;
+    height: 120px;
+    float: left;
+    text-align: center;
+}
+
+.basic>span {
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin: auto;
+}
+
+.informationBtn {
+    width: 80px;
+    color: #8C5C02;
+    border: 2px solid rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: rgb(234, 242, 4, 0.3);
+}
+
+.basicBtn {
+    text-align: right;
+}
+
+/* 折扣券|回饋金頁面 */
+
+/* Style the tab */
+.discountTab,
+.rebateTab {
+    overflow: hidden;
+    /* border: 1px solid #ccc;     */
+    width: 100%;
+}
+
+/* 可使用 已使用按鈕 */
+.discountTab button,
+.rebateTab button {
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    float: left;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+    outline: none;
+    /* cursor: pointer; */
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 16px;
+    width: 50%;
+
+}
+
+/* 可使用已使用按鈕hover */
+.discountTab button:hover .rebateTab button:hover {
+    color: #F29F04;
+    border-bottom: 3px solid #F29F04;
+}
+
+/* 可使用已使用按鈕被點選 */
+.discountTab button.active,
+.rebateTab button.active {
+    /* background-color: #ccc; */
+    color: #F29F04;
+    border-bottom: 2px solid #F29F04;
+    font-weight: bold;
+}
+
+/* 折扣券內容 */
+.discountBody,
+.rebateBody {
+    display: none;
+    padding: 6px 12px;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    /* background-color: aquamarine; */
+
+}
+
+/* ***折扣券裡的樣式 *** */
+
+/* 折扣券樣式 -- 可使用 */
+.discountDiv {
+    background-color: rgb(234, 242, 4, 0.5);
+    width: 280px;
+    height: 120px;
+    -webkit-mask-image: radial-gradient(circle at 20px 20px, transparent 20px, red 20.5px);
+    -webkit-mask-position: -20px -20px;
+    float: left;
+    margin: 10px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+/* 95折 設定 */
+.discountDiv span:first-of-type {
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.discountDiv span:last-of-type {
+    color: red;
+    font-size: 14px;
+}
+
+/* 折扣券樣式 -- 已使用 */
+.discountDivUsed {
+    background-color: rgba(195, 195, 192, 0.3);
+    width: 280px;
+    height: 120px;
+    -webkit-mask-image: radial-gradient(circle at 20px 20px, transparent 20px, red 20.5px);
+    -webkit-mask-position: -20px -20px;
+    float: left;
+    margin: 10px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.discountDivUsed span {
+    color: rgb(193, 187, 187);
+
+}
+
+/* 95折 設定 */
+.discountDivUsed span:first-of-type {
+    color: rgb(193, 187, 187);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.discountDivUsed span:last-of-type {
+    color: rgb(193, 187, 187);
+    font-size: 14px;
+}
+
+
+/* ***回饋金 頁面 *** */
+.rebateH2 {
+    margin-bottom: 0.20em;
+}
+
+.rebateGetTable,
+.rebateUsedTable {
+    width: 100%;
+}
+
+.rebateGetTr,
+.rebateUsedTr {
+    height: 45px;
+}
+
+.rebateGetTr>td,
+.rebateUsedTr>td {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+}
+
+/* 已使用回饋金P的顏色變灰 */
+.rebateUsedTr>td>img {
+    filter: grayscale(100%);
+}
+
+/* 回饋金使用 寬度 */
+.rebateUsedTr td:last-of-type,
+.rebateGetTr td:last-of-type {
+    width: 15%;
+}
+
+/* 回饋金使用 數字顏色變紅 */
+.rebateUsedTr td:last-of-type {
+    color: red;
+    width: 15%;
+}
+
+/* 使用情形內容 */
+.rebateUsedTr td:first-of-type,
+.rebateGetTr td:first-of-type {
+    width: 50%;
+}
+
+
+
+
+/*  ***訂單管理*** */
+
+.memberOrderH2 {
+    margin-bottom: 0.1rem;
+}
+
+/* Style the tab */
+.memberOrderTab {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* 可使用 已使用按鈕 */
+.memberOrderTab button {
+    border: none;
+    outline: none;
+    background-color: white;
+    float: left;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+    outline: none;
+    padding: 5px 16px;
+    transition: 0.3s;
+    font-size: 16px;
+    width: 33%;
+    /* background-color: red; */
+
+}
+
+/* 可使用已使用按鈕hover */
+.memberOrderTab button:hover {
+    color: #F29F04;
+    border-bottom: 3px solid #F29F04;
+}
+
+/* 可使用已使用按鈕被點選 */
+.memberOrderTab button.active {
+    color: #F29F04;
+    border-bottom: 2px solid #F29F04;
+    font-weight: bold;
+}
+
+/* 訂單管理內容 */
+.memberOrderBody {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+
+}
+
+/* 訂單明細大小 */
+.OrderReadyDiv {
+    width: 95%;
+    height: 160px;
+    margin: auto;
+    /* margin-top: 5px; */
+    margin-bottom: 5px;
+    /* background-color: lightcoral; */
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    padding: 10px;
+
+}
+
+/* 訂單左邊圖片大小 */
+.OrderReadyImg {
+    width: 35%;
+    height: 160px;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    /* background-color: lightgreen; */
+    float: left;
+
+}
+
+.OrderReadyImg>img {
+    width: 100%;
+    height: 160px;
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 訂單明細右邊欄位 */
+.OrderReadyRight {
+    float: left;
+    width: 63%;
+    height: 160px;
+    /* background-color: lightslategrey; */
+    margin-left: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* 訂單名稱+以訂單編號 */
+.ORRightName {
+    padding: 5px 20px;
+    text-align: left;
+}
+
+.ORRightName>h4 {
+    margin-right: 20px;
+    margin-bottom: 0.2rem;
+    margin-top: 0.6em;
+}
+
+/* 訂單理的價格 */
+.ORRightPrice {
+    text-align: right;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.ORRightBtn {
+    text-align: right;
+    margin-bottom: 10px;
+
+}
+
+.ORRightBtn>button {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(242, 159, 4, 0.2);
+    border-radius: 5px;
+    border: none;
+    color: #8C5C02;
+    padding: 5px;
+    margin-right: 20px;
+    margin-top: 10px;
+    /* margin: 10px 20px; */
+}
+
+
+/* ****我的收藏**** */
+
+/* 收藏大小 */
+.collectDiv {
+    width: 95%;
+    height: 250px;
+    margin: auto;
+    /* margin-top: 5px; */
+    margin-bottom: 20px;
+    /* background-color: lightcoral; */
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    padding: 10px;
+
+}
+
+.collectImg {
+    width: 35%;
+    height: 250px;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    /* background-color: lightgreen; */
+    float: left;
+
+}
+
+.collectImg>img {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.collectName>h3 {
+    margin-top: 0.4em;
+    margin-right: 30px;
+    /* background-color: red; */
+}
+
+/* 訂單明細右邊欄位 */
+.collectRight {
+    float: left;
+    width: 63%;
+    height: 160px;
+    /* background-color: lightslategrey; */
+    margin-left: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* 訂單名稱+以訂單編號 */
+.collectName {
+    padding: 5px 20px;
+    text-align: left;
+
+}
+
+.collectName>p {
+    /* background-color: #8C5C02; */
+    color: rgb(0, 0, 0, 0.7);
+    font-size: 14px;
+    width: 100%;
+    height: 100px;
+}
+
+/* 收藏理的價格+評價星星位置 */
+.collectNamePrice {
+    width: 100%;
+    height: 50px;
+    /* background-color: rebeccapurple; */
+}
+
+/* 我的收藏裡的價格 */
+.collectNamePrice>span {
+    float: right;
+    /* background-color: #8C5C02; */
+}
+
+/* 我的收藏評價星星 */
+.collectstar {
+    float: left;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid pink; */
+    /* background-color: lightblue; */
+}
+
+.collectstar div:last-of-type {
+    font-size: small;
+}
+
+.collectstar>img {
+    height: 15px;
+    width: 15px;
+    /* background-image: url(0.png); */
+    background-size: cover;
+}
+
+.collectHeart {
+    border: none;
+    background-color: white;
+    /* position: absolute; */
+    /* background-color: aqua; */
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.collectHeart>i {
+    filter: invert(52%) sepia(82%) saturate(2494%) hue-rotate(327deg) brightness(104%) contrast(92%);
+
+}
+
+/* 前往評價點進去的的評價頁面 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+    margin: auto;
+}
+
+/* 燈箱內容 */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 300px;
+    height: 250px;
+    font-size: 14px;
+    padding: 5px 0 5px 10px;
+    text-align: center;
+}
+
+/* X位置 */
+.close {
+    /* position: absolute; */
+    /* right: 25px; */
+    float: right;
+    top: 0;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+/* X hover */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* 前往評價裡的星星 */
+.star {
+    width: 80px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+    /* border: 1px solid pink; */
+    /* margin: 10px auto; */
+    /* background-color:lightblue ; */
+}
+
+.box1 {
+    height: 15px;
+    width: 15px;
+    background-image: url(./images/0.png);
+    background-size: cover;
+}
+.evaluationStar {
+    /* background-color: red; */
+    width: 100%;
+    height: 30px;
+}
+.evaluationText {
+    /* background-color: #888; */
+    width: 75%;
+    height: 30px;
+    /* float: left; */
+    margin: 0 auto;
+}
+
+.evaluationSendBtn {
+    background-color: rgb(255, 255, 0,0.3);
+    border-radius: 5px;
+    border: 1px solid rgb(198, 197, 197);
+    width: 60px;
+    color: #8C5C02;
+}
+
+.evaluationSendBtn:hover {
+    background-color: #F29F04;
+    color: #F29F04;
+}
+
+/* 七天簽到頁面 */
+.dayOneSeven>img {
+width: 230px;
+cursor: pointer;
+}
+.dayOneSeven {
+    text-align: center;
+}

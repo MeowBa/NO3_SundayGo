@@ -1,0 +1,239 @@
+.companyName {
+    width: 1280px;
+    /* background-color: #F29F04; */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    color: #8C5C02;
+}
+
+/* 置中留白 */
+.MemberCentre {
+    width: 1280px;
+    margin: 0 auto;
+    height: 800px;
+}
+
+
+/* 左邊樣式 */
+.tab {
+    float: left;
+    /* background-color: #f1f1f1; */
+    width: 20%;
+    height: 600px;
+}
+
+.tabBtn {
+    border: 2px #ccc solid;
+    border-radius: 10px;
+    padding: 3px;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.tabBtn img {
+    filter: grayscale(100%);
+}
+
+
+/* 分頁按鈕的樣式 */
+.tabBtn>button {
+    display: block;
+    background-color: inherit;
+    color: rgb(0, 0, 0, 0.5);
+    padding: 18px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+
+/* 分頁按鈕hover */
+.tabBtn button:hover {
+    color: #F29F04;
+    border-left: 4px #F29F04 solid;
+
+}
+
+/* 按鈕裡圖片的hover */
+.tabBtn>button:hover img {
+    filter: grayscale(0%);
+}
+
+/* 分頁按鈕選中的顏色 */
+.tabBtn button.active {
+    /* background-color: #ccc; */
+    color: #F29F04;
+    border-left: 4px #F29F04 solid;
+
+}
+
+.tabBtn>button.active img {
+    filter: grayscale(0%);
+}
+
+/* 右邊顯示的樣式 */
+.tabcontent {
+    /* background-color: #8C5C02; */
+    float: left;
+    padding: 0 18px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 73%;
+    min-height: 680px;
+    /* height: 655px; */
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+/* 帳號設定 基本資料 */
+
+.tabcontent h2 {
+    padding: 10px 12px;
+    /* background-color: aqua; */
+}
+
+.setBody {
+    /* background-color: lightblue; */
+    /* width: 780px; */
+    height: 520px;
+    margin: auto;
+    /* padding: 10px 12px; */
+}
+
+.setBody span {
+    font-size: 16px;
+    margin: 10px 12px;
+    /* background-color: red; */
+}
+
+.setBody div b {
+    color: red;
+}
+
+/* 輸入框設定 */
+.setBody input,
+select {
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    outline: 2px solid rgba(0, 0, 0, 0.2);
+    /* 外框效果 */
+    /* border: 2px solid rgba(0, 0, 0, 0.3); */
+    border-radius: 10px;
+}
+
+.basic {
+    /* background-color: lawngreen; */
+    /* padding: 10px px; */
+    width: 50%;
+    height: 120px;
+    float: left;
+    text-align: center;
+}
+
+.basic>span {
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin: auto;
+}
+
+.informationBtn {
+    width: 80px;
+    color: #8C5C02;
+    border: 2px solid rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: rgb(234, 242, 4, 0.3);
+}
+
+.basicBtn {
+    text-align: right;
+}
+
+
+/*  ***廠商訂單管理*** */
+
+.addCommodity{
+    color: #8C5C02;
+    text-decoration:none;
+    float: right;
+    margin-right: 20px;
+    /* background-color: aqua; */
+}
+.addCommodity:hover{
+    color: #F29F04;
+}
+
+.memberOrderH2 {
+    margin-bottom: 0.1rem;
+}
+
+
+/* 訂單左邊圖片大小 */
+.OrderReadyImg {
+    width: 100%;
+    height: 160px;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    /* background-color: lightgreen; */
+    float: left;
+
+}
+
+.OrderReadyImg>img {
+    width: 100%;
+    height: 160px;
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.companyTb {
+    /* background-color: lightblue; */
+    /* border: 2px solid #8C5C02; */
+    border-top: 2px solid #8C5C02;
+    border-right: 2px solid #8C5C02;
+    border-left: 2px solid #8C5C02;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+
+/* 內容寬度 */
+.companyTb td:first-of-type{
+    width: 30%;
+}
+.companyTb td {
+    width: 25%;
+    border-bottom: 2px solid #8C5C02;
+    padding: 5px;
+}
+
+.companyTb td:nth-child(3){
+    width: 10%;
+}
+
+.companyTb td:nth-child(4){
+    width: 25%;
+}
+.companyTb td:last-of-type{
+    width: 10%;
+}
+
+.companyTb button{
+    background-color: rgb(255, 255, 0,0.3);
+    border: 2px solid #F29F04;
+    width: 70px;
+    border-radius:5px;
+    margin-top: 10px;
+
+}

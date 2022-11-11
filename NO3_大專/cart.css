@@ -1,0 +1,232 @@
+/* 購物車明細 */
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    min-height: 450px;
+}
+
+.carTitle {
+    width: 1280px;
+    height: 40px;
+    margin: auto;
+    font-size: 18px;
+    border-radius: 3px;
+    padding-left: 10px;
+    line-height: 40px;
+}
+
+.carHeader {
+    display: flex;
+    width: 1280px;
+    margin: 0 auto;
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: 2px solid #8C5C02;
+    ;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.carHeader div {
+    width: 200px;
+    line-height: 30px;
+}
+
+.carHeader .carDetail {
+    width: 50%;
+}
+
+.carBody {
+    margin-top: 10px;
+    height: 150px;
+    align-items: center;
+}
+
+.carDetail img {
+    width: 100%;
+    height: 130px;
+    border-radius: 3px;
+    float: left;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carDetail .name {
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+/* 購物車下層更多熱銷 */
+.toMoreHot {
+    width: 1280px;
+    margin: 0 auto;
+    height: 250px;
+    font-size: 18px;
+}
+
+.toMoreHot img {
+    border-radius: 20px;
+    float: left;
+    width: 280px;
+    height: 180px;
+    padding: 10px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 15px;
+}
+
+.toMoreHot>span {
+    margin-left: 30px;
+}
+
+.operate>i {
+    cursor: pointer;
+}
+
+/* 購物車按鈕及合計 */
+
+.carTotal {
+    width: 1280px;
+    height: 50px;
+    margin: 0 auto;
+    /* background-color: aquamarine; */
+    text-align: right;
+}
+
+.carTotal>div {
+    margin-right: 130px;
+}
+
+.carTotal>a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid #8C5C02;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #F29F04;
+    top: -35px;
+    position: relative;
+}
+
+.carTotal>a:hover {
+    background-color: rgb(242, 159, 4, 0.7);
+}
+
+/* 繼續購物按鈕 */
+.continueBtn {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: right;
+
+}
+
+.continueBtn>a {
+    text-decoration: none;
+    color: #F29F04;
+}
+
+.continueBtn>a:hover {
+    color: #a26b05;
+}
+
+
+/* 訂購完成頁面 */
+
+.okOrderBody {
+    width: 1280px;
+    min-height: 250px;
+    margin: 10px auto;
+    border: 2px solid #F29F04;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.okOrderBody>img {
+    width: 90px;
+
+}
+
+.okOrderBody>a {
+    text-decoration: none;
+    color: black;
+    padding: 0 15px;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: rgb(242, 159, 4, 0.3);
+}
+
+.okOrderBody>a:hover {
+    background-color: rgb(242, 159, 4, 0.6);
+}
+
+
+
+
+#progressBar {
+    width: 1000px;
+    height: 50px;
+    position: relative;
+    margin:  auto;
+}
+
+#progressBar div {
+    z-index:18;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: 12px;
+    background: #ccc;
+}
+
+#progressBar div span {
+    z-index:18;
+    position: absolute;
+    display: inline-block;
+    background: rgb(242, 159, 4);
+    height:5px;
+    /* 第一階段購物車清單改25% 訂購完成改100% */
+    width: 25%;
+}
+
+/* 第二朵花灰階 */
+.cartList>li:nth-child(2)>img {
+    filter: grayscale(100%);
+}        
+
+.cartList>li:nth-child(3)>img {
+    filter: grayscale(100%);
+}
+
+/* 花跟字內容設定 */
+
+.cartList {
+    display: flex;
+    justify-content: center;
+}
+
+.cartList li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* height: 50px; */
+}
+
+.cartList>li>img {
+    z-index:19;
+    width: 35px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.cartList li+li {
+    margin-left: 200px;
+}

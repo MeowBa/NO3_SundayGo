@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廠商</title>
+    <script src="./_js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="company.css">
+</head>
+
+<body>
+    <!-- 此處是header 不用看 -->
+
+    <div class="header ">
+        <img src="./images/群組 1.png" alt="" style="width: 90px ;top: -8px; position: relative;">
+        <div class="header-right">
+            <a href="#">美食</a>
+            <a href="#">景點</a>
+            <a href="#">活動</a>
+            <a href="#">住宿</a>
+            <a href="#">交通</a>
+            <a href="#"><img src="./images/cart.png" style="width: 25px ;"></a>
+            <a href="#">登入|註冊</a>
+        </div>
+        <form class="example" action="">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+
+    <!-- body -->
+
+    <div class="companyName"><span>XXX股份有限公司</span> &nbsp;<span>您好！</span></div>
+    <div class="MemberCentre">
+        <!-- 左邊欄位 -->
+        <div class="tab">
+            <!-- 大分頁按鈕 -->
+            <div class="tabBtn">
+                <button class="tablinks" onclick="openCity(event, 'information')" id="defaultOpen">
+                    <span><img src="./images/flower.png" style="width: 30px; vertical-align:middle; ">&emsp;帳號設定</span>
+                </button>
+                <button class="tablinks" onclick="openCity(event, 'memberOrder')">
+                    <span><img src="./images/flower.png" style="width: 30px; vertical-align:middle; ">&emsp; 訂單管理</span>
+                </button>
+            </div>
+
+        </div>
+        <!-- 帳號設定頁面 -->
+        <div id="information" class="tabcontent">
+            <h2>帳號設定 </h2>
+            <div class="setBody">
+                <span style="color: #8C5C02;"> <b>基本資料</b> </span>
+                <br><br>
+                <div class="basic">
+                    <span>公司名稱</span>
+                    <input type="text" value="XXX股份有限公司">
+                </div>
+                <div class="basic">
+                    <span>統一編號</span>
+                    <input type="text" value="12345678">
+                </div>
+                <div class="basic">
+                    <span>負責人</span>
+                    <input type="text" value="王大明">
+                </div>
+                <div class="basic">
+                    <span>公司聯絡號碼<b>*</b></span>
+                    <input type="tel">
+                </div>
+                <div class="basic">
+                    <span>公司所在地<b>*</b></span>
+                    <input type="tel">
+                </div>
+                <div class="basic">
+                    <span>公司E-mail<b>*</b></span>
+                    <input type="email">
+                </div>
+                <div class="basic">
+                    <span>密碼<b>*</b></span>
+                    <input type="password">
+                </div>
+
+            </div>
+            <div class="basicBtn">
+                <button class="informationBtn"> <b>儲存</b> </button>
+            </div>
+        </div>
+
+        <!-- 訂單管理頁面 -->
+        <div id="memberOrder" class="tabcontent">
+            <div class="setBody">
+                <h2 class="memberOrderH2">訂單管理</h2>
+                <a href="" class="addCommodity">+上架新商品</a>
+                <br>
+                <div class="memberOrderBtn" style="width:100% ">                    
+                    <table class="companyTb">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="OrderReadyImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                                </td>
+                                <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                <td>$762</td>
+                                <td>
+                                    <p>庫存 <span>12</span></p>
+                                    <p>銷售數 <span>18</span></p>
+                                    <p>上架時間 <span>2022-11-08</span></p>                                    
+                                </td>
+                                <td>
+                                    <button>編輯</button> <br>
+                                    <button class="companyDelete">刪除</button>
+                                </td>
+                                
+                            </tr>
+                            
+                            <tr >
+                                <td>
+                                    <div class="OrderReadyImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                                </td>
+                                <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                <td>$762</td>
+                                <td>
+                                    <p>庫存 <span>12</span></p>
+                                    <p>銷售數 <span>18</span></p>
+                                    <p>上架時間 <span>2022-11-08</span></p>                                    
+                                </td>
+                                <td>
+                                    <button>編輯</button> <br>
+                                    <button class="companyDelete">刪除</button>
+                                </td>
+                                
+                            </tr>
+                            <tr >
+                                <td>
+                                    <div class="OrderReadyImg"><img src="./images/商品暫用圖/A02.jpg"></div>
+                                </td>
+                                <td>桃園青埔|Xpark 都會型水生公園門票</td>
+                                <td>$762</td>
+                                <td>
+                                    <p>庫存 <span>12</span></p>
+                                    <p>銷售數 <span>18</span></p>
+                                    <p>上架時間 <span>2022-11-08</span></p>                                    
+                                </td>
+                                <td>
+                                    <button>編輯</button> <br>
+                                    <button class="companyDelete">刪除</button>
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 此處是footer 不用看 -->
+
+    <div class="footer">
+        <div class="footerCenter">
+            <div class="footerBody">
+                <ul>
+                    <h4>認識我們</h4>
+                    <li><a href="">關於我們</a></li>
+                    <li><a href="">使用者條款</a></li>
+                    <li><a href="">隱私權保護政策</a></li>
+                    <li><a href="">常見問題與幫助</a></li>
+                </ul>
+            </div>
+            <div class="footerBody">
+                <ul>
+                    <h4>給旅行者們</h4>
+                    <li><a href="">三大保證</a></li>
+                    <li><a href="">合作夥伴</a></li>
+                    <li><a href="">回饋金介紹</a></li>
+                    <li><a href="">賺取額外獎勵</a></li>
+                </ul>
+            </div>
+            <div class="footerBody">
+                <ul>
+                    <h4>給合作夥伴</h4>
+                    <li><a href="">成為供應商</a></li>
+                    <li><a href="">供應商登入</a></li>
+                    <li><a href="">同業合作</a></li>
+                    <li><a href="">聯盟行銷</a></li>
+                </ul>
+            </div>
+            <div class="footerBody">
+                <div class="footerImg">
+                    <h4>付款方式</h4>
+                    <img src="./images/MasterCard.png">
+                    <img src="./images/JCB.jpg">
+                    <img src="./images/visa.png">
+                    <img src="./images/googlepay.jpg">
+                    <img src="./images/apple-pay.png">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="company.js"></script>
+</body>
+
+</html>
